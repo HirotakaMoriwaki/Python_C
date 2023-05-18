@@ -10,3 +10,4 @@ g = ct * per_ct
 # 結果を表示
 desc = "{0}カラット = {1}グラム".format(ct, g)
 print(desc)
+
