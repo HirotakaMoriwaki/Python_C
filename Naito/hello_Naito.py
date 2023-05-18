@@ -1,2 +1,2 @@
-#出力
+#出力Hello
 print('Hello, World!')
