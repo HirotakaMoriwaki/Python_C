@@ -2,7 +2,7 @@
 import sys 
 
 args =sys.argv
-
+#変数に駅を代入
 start = args[1]
 end = args[2]
 
@@ -16,4 +16,4 @@ dis ={
 }
 print('{:.2f}'.format(abs(dis[end]-dis[start])),end='')
 
-
+#print(round(abs(dis[end]-dis[start]),2),end='')
