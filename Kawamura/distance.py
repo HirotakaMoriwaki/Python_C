@@ -13,6 +13,6 @@ distance = {
     '新大阪':515.35,
 }
 
-distance_between = distance[input2] - distance[input1]
+distance_between = distance[input2] - distance[input1] # 距離を求める
 
-print(abs(round(distance_between,2)), end="")
+print(abs(round(distance_between,2)), end="") # 四捨五入小数点第二位までかつ絶対値を指定
