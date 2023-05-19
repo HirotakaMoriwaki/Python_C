@@ -1,0 +1,2 @@
+#あああ
+print("Hello, world!")
