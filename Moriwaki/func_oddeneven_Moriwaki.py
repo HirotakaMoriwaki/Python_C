@@ -13,7 +13,7 @@ def calcvalue(num):
         print(str(num) + "は偶数")
 
 #入力をint型に変更
-list = [int(x) for x in args[1:4]]
+list = [int(x) for x in args[1:]]
 
 for i in list:
     calcvalue(i)
