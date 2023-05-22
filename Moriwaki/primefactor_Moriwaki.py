@@ -16,16 +16,17 @@ for j in range(2,num):
         list_prime.append(j)
 
 ###素数で割るアルゴリズム
-def devide_prime(n,list):
-    for i in list:
+def devide_prime(n,list1, list2):
+    for i in list1:
         if n % i == 0:
-            return devide_prime(n//i,list)
+            list2.append(i)
+            return devide_prime(n//i,list1,list2)
+    list2.append(n)
 
 ###実際に計算する
-list_ans.append(num)
 
-while devide_prime(num,list_prime) == False:
-    list_ans.append(devide_prime(num,list_prime))
-    num = num//devide_prime(num,list_prime)
+devide_prime(num,list_prime,list_ans)
+if list_ans.count(1) != 0:
+    list_ans.remove(1)
 
-print(list_prime,list_ans.sort())
+print(list_ans, end = "")
