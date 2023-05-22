@@ -15,19 +15,17 @@ for j in range(2,num):
     if check(j) == True:
         list_prime.append(j)
 
-###素数で割る
-s = True
-t = True
-while s:
-    for k in list_prime:
-        
-        while t:
-            if num % k == 0:
-                list_ans.append(k)
-                num = num // k
-                t = False
-            s = False
+###素数で割るアルゴリズム
+def devide_prime(n,list):
+    for i in list:
+        if n % i == 0:
+            return devide_prime(n//i,list)
 
+###実際に計算する
+list_ans.append(num)
 
-print(list_ans,list_prime,num)
+while devide_prime(num,list_prime) == False:
+    list_ans.append(devide_prime(num,list_prime))
+    num = num//devide_prime(num,list_prime)
 
+print(list_prime,list_ans.sort())
