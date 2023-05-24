@@ -16,6 +16,7 @@ dis ={
 
 try:
     print('{:.2f}'.format(abs(dis[end]-dis[start])),end='')
+#例外処理
 except KeyError:
     print("のぞみの停車駅を引数に設定してください",end="")
 #print(round(abs(dis[end]-dis[start]),2),end='')
