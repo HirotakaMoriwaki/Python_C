@@ -5,7 +5,10 @@ def change(cost):
     print("おつり")
     for money in money_type:
         coin = cost // money # //は切り捨ての割り算
-        print(str(money), '円玉' , str(coin) , '枚')
+        if(money >= 1000):
+            print(str(money), '円札' , str(coin) , '枚')
+        else:
+            print(str(money), '円玉' , str(coin) , '枚')
         cost -= coin * money
 
 #メニュー：辞書型
