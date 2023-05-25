@@ -5,7 +5,10 @@ def change(cost):
     print("おつり")
     for money in money_type:
         coin = cost // money # //は切り捨ての割り算
-        print(str(money), '円玉' , str(coin) , '枚')
+        if(money >= 1000):
+            print(str(money), '円札' , str(coin) , '枚')
+        else:
+            print(str(money), '円玉' , str(coin) , '枚')
         cost -= coin * money
 
 #メニュー：辞書型
@@ -46,8 +49,9 @@ while hantei:
         print("1円玉、5円玉は使用できません。",end="")
         cost=int(input("再度投入金額を入力してください\n"))
         continue
+    #購入
     elif(cost >= m and next == "Y"):
-        buy = input('何を購入しますか（商品名/cancel）')
+        buy = input('何を購入しますか（商品名/cancel）\n')
         if(buy == 'cancel'):
             change(cost)
             break
@@ -59,7 +63,7 @@ while hantei:
                     if(cost==0):
                         hantei = False
                     else:
-                        next=input("続けて購入しますか（Y/N）")
+                        next=input("続けて購入しますか（Y/N）\n")
                     if(cost < m or next=="N"):
                         change(cost)
                         hantei = False
